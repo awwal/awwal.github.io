@@ -5,7 +5,7 @@ published: true
 ## VSTS Git SSH Issue
 
 
-For uknown reason, after a recent change in VSTS ssh url, my SSH key was rejected by the MS Server.After confirming that my uploaded keys fingerprint matches. I started digging.
+For unknown reason, after a recent change in VSTS ssh url, my SSH key was rejected by the MS Server.After confirming that my uploaded keys fingerprint matches. I started digging.
 
 For anyone with the same problems. My hunch is that the MS git servers rejects the configured SSH key if it is not the first presented. This will happen if you have multiple keys. 
 
