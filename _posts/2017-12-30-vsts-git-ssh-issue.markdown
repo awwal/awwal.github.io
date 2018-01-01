@@ -11,7 +11,10 @@ For anyone with the same problems. My hunch is that the MS git servers rejects t
 
 First you can try 
 
+```
 ssh-agent bash -c 'ssh-add /home/xxx/.ssh/me; git clone ssh://myrepo@vs-ssh.visualstudio.com:22/DefaultCollection/xxx/_ssh/xxx'
+```
+
 This will execute the git command (clone in this case) in an isolated env using only the specified key. If this works, you can then edit your .ssh/config file and alias the vs-ssh.visualstudio.com and specify the configured key. See example below
 
 ```
