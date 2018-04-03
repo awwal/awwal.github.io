@@ -4,17 +4,16 @@ published: true
 
 ## Domain Dependent Knowledge
 
-A concept, I have become increasingly aware of domain dependent knowledge. It refers to the phenomenon of difficulty to transfer knowledge in one domain into another and our expectation that it should be. So now I have become aware of the silliness in expecting a chess champion to be a master in business strategy. Such an individual could indeed train himself to apply some chess techniques to business strategy but that knowledge transfer those not happen automatically. 
+A concept, I have become increasingly aware of domain dependent knowledge. It refers to the phenomenon of the difficulty in transfering knowledge from one domain to another. Now, I have become aware of the silliness in expecting a chess champion to be a master in business strategy. Such an individual could indeed train himself to apply some chess techniques to business strategy but that knowledge transfer those not happen automatically. 
 
 Coming to software engineering practice, It is rare to see developers take some of the alogrithms, aphorism they've learnt and apply them to daily life, nay apply it to non coding aspect of their work.
 
-Consider a syntax error, when running an application depending on a yaml e.g an ansible playbook. Experience teaches that the reported line number is not necessarily helpful, it could have occurred anywhere in the program. Instinctively you scan through the file hoping it would be an obvious typo or mispelling. But no, it wasn't. Then you 'git diff' to see if was a new edit you made that has caused this. Nothing amiss there also. Alas you proceed to test
+Consider a syntax error, when running an application depending on a yaml file e.g an ansible playbook. Experience teaches that the reported line number is not necessarily helpful, it could have occurred anywhere in the program. Instinctively you scan through the file hoping it would be an obvious typo or mispelling. But no, it wasn't. Then you 'git diff' to see if was a new edit you made that has caused this. Nothing amiss there also. Alas you proceed to test
 the config.
 
-The question is, how do you approach this ? In my experience, and I have sat near enough techies for this to count, you will start with a cursory look from line 1 to the end of the file, after finding nothing, you will try once more. Again you will try the same approach but a bit more careful and launch the command again. With me by your side, I will whisper, lets eliminate some sections of the file and see where it fails. Most of the time, the elimination will start from the top of the file downwards. This is bound to be O(n). By now you it is clear to you that the elimination should have be done by eliminating half of the task till we get the portion of the file where the problem is. A O(log n).
+The question is, how do you approach this ? In my experience, and I have sat near enough techies for this to count, you will start with a cursory look from line 1 to the end of the file, after finding nothing, you will try once more. Again you will try the same approach but a bit more careful and launch the command again. With me by your side, I will whisper, lets eliminate some sections of the file and see where it fails. Most of the time, the elimination will start from the top of the file, section by section downwards. This is bound to be O(n). By now you it is clear to you that the elimination should have be done by eliminating half of the task till we get the portion of the file where the problem is. A O(log n).
 
 The failure to translate this basic computer science knowledge is astonishing.
-
 
 The DRY (Don't repeat yourself) principle is another which I see repeatedly not applied to other than code itself. 
 
