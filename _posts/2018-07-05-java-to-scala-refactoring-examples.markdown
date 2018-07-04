@@ -55,6 +55,6 @@ Not only does it not work, it is verymuch java-ish.
       
 ` 
 
-This creates a range from 1 to 5 inclusive. map over each number and creates of Tuple2 of the pairs. The tuple2 is then converted to a Map.
+This creates a range from 1 to 5 inclusive, then maps over each number and creates Tuple2 of (Int,String). The tuple2 is then converted to a Map.
 
-Obviously this is contrived example. The tuple2 is sufficient if we are not printing to screen or a in context where a Map is not necessarily needed.
+Obviously this is contrived example. The tuple2 is sufficient if we are just printing to screen or in a context where a unique key is not needed.
