@@ -26,28 +26,33 @@ The scala plugin in intellij provides ability to refactor java to Scala. While t
 Using the intellij scala plugin, a refactor produces this
 
 `
-  @Test def testMapping(): Unit = {
-    val oneToFive = new util.HashMap[Integer, String]
-    var i = 1
-    while ( {  i <= 5  }) {
-      val englishTest = getEnglishTest(i)
-      oneToFive.put(i, englishTest) {
-        i += 1;
-        i - 1
+
+      @Test def testMapping(): Unit = {
+        val oneToFive = new util.HashMap[Integer, String]
+        var i = 1
+        while ( {  i <= 5  }) {
+          val englishTest = getEnglishTest(i)
+          oneToFive.put(i, englishTest) {
+            i += 1;
+            i - 1
+          }
+        }
+        System.out.println(oneToFive.entrySet)
       }
-    }
-    System.out.println(oneToFive.entrySet)
-  }
+
 `
 
 Not only does it not work, it is verymuch java-ish. 
 
 `
-  @Test
-  def testMapping(): Unit = {
-    val oneToFive: Map[Int, String] = (1 until  5).map(i => (i, getEnglishText(i))).toMap
-    println(oneToFive)
-  }
+
+      @Test
+      def testMapping(): Unit = {
+        val oneToFive: Map[Int, String] = (1 until  5).map(i => (i, getEnglishText(i))).toMap
+        println(oneToFive)
+      }
+      
+      
 ` 
 
 This creates a range from 1 to 5 inclusive. map over each number and creates of Tuple2 of the pairs. The tuple2 is then converted to a Map.
