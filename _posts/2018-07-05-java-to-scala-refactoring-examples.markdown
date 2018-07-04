@@ -13,8 +13,8 @@ The scala plugin in intellij provides ability to refactor java to Scala. While t
 
         Map<Integer, String> oneToFive = new HashMap<>();
         for (int i = 1; i <= 5; i++) {
-            String englishTest = getEnglishTest(i);
-            oneToFive.put(i, englishTest);
+            String englishText = getEnglishText(i);
+            oneToFive.put(i, englishText);
         }
 
         System.out.println(oneToFive.entrySet());
@@ -31,8 +31,8 @@ Using the intellij scala plugin, a refactor produces this
         val oneToFive = new util.HashMap[Integer, String]
         var i = 1
         while ( {  i <= 5  }) {
-          val englishTest = getEnglishTest(i)
-          oneToFive.put(i, englishTest) {
+          val englishText = getEnglishText(i)
+          oneToFive.put(i, englishText) {
             i += 1;
             i - 1
           }
