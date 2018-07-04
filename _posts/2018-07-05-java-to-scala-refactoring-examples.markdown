@@ -29,9 +29,7 @@ Using the intellij scala plugin, a refactor produces this
   @Test def testMapping(): Unit = {
     val oneToFive = new util.HashMap[Integer, String]
     var i = 1
-    while ( {
-      i <= 5
-    }) {
+    while ( {  i <= 5  }) {
       val englishTest = getEnglishTest(i)
       oneToFive.put(i, englishTest) {
         i += 1;
@@ -43,7 +41,6 @@ Using the intellij scala plugin, a refactor produces this
 `
 
 Not only does it not work, it is verymuch java-ish. 
-
 
 `
   @Test
