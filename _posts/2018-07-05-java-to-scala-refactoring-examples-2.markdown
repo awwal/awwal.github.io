@@ -6,8 +6,7 @@ published: true
 
 Say we have an expected failure test
 
-`
-
+```
     @Test
     public void testFailureScenario() {
 
@@ -20,13 +19,12 @@ Say we have an expected failure test
         }
 
     }
-`
+```
 
 
 Using the intellij scala plugin, a refactor produces this
 
-`
-
+```
     @Test
     def testFailureScenario(): Unit = {
     val s = "1;"
@@ -40,13 +38,12 @@ Using the intellij scala plugin, a refactor produces this
     }
   }
 
-`
+```
 
 
 That works. But we can do better. We can create a method like assertThrowsException that can be re-used.
 
-`
-
+```
     @Test
     def testFailureScenario(): Unit = {
       val s = "1;"
@@ -64,7 +61,8 @@ That works. But we can do better. We can create a method like assertThrowsExcept
       }
 
     }
-` 
+``` 
+
 
 The assertThrowsException takes two parameter set.
 
