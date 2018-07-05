@@ -4,7 +4,7 @@ published: true
 
 ##  Java to Scala Refactoring examples 2
 
-Expected failure test
+Say we have an expected failure test
 
 `
 
